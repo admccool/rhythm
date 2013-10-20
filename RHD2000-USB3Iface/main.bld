@@ -1,0 +1,1227 @@
+Release 14.6 ngdbuild P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.6/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -nt timestamp -uc
+/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3/xem6310.ucf -p xc6slx45-fgg484-2
+main.ngc main.ngd
+
+Reading NGO file "/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/main.ngc"
+...
+Loading design module
+"/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/okWireIn.ngc"...
+Loading design module
+"/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/okTriggerIn.ngc"...
+Loading design module
+"/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/okWireOut.ngc"...
+Loading design module
+"/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/okPipeOut.ngc"...
+Loading design module
+"/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/okCoreHarness.ngc"...
+Loading design module
+"/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/TFIFO64x8a_64x8b.ngc"...
+Loading design module
+"/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/fifo_w16_2048_r64_512.ngc"..
+.
+Loading design module
+"/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/fifo_w64_512_r16_2048.ngc"..
+.
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3/xem6310.ucf" ...
+WARNING:NgdBuild - The value of SIM_DEVICE on instance
+   'SDRAM_FIFO_inst/memc3_infrastructure_inst/u_pll_adv' of type PLL_ADV has
+   been changed from 'VIRTEX5' to 'SPARTAN6' to correct post-ngdbuild and timing
+   simulation for this primitive.  In order for functional simulation to be
+   correct, the value of SIM_DEVICE should be changed in this same manner in the
+   source netlist or constraint file.
+WARNING:NgdBuild - The value of SIM_DEVICE on instance 'host/core0/core0/r0' of
+   type RAMB16BWER has been changed from 'SPARTAN3ADSP' to 'SPARTAN6' to correct
+   post-ngdbuild and timing simulation for this primitive.  In order for
+   functional simulation to be correct, the value of SIM_DEVICE should be
+   changed in this same manner in the source netlist or constraint file.
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'okHostClk', used in period specification
+   'TS_okHostClk', was traced into DCM_SP instance host/dcm0. The following new
+   TNM groups and period specifications were generated at the DCM_SP output(s): 
+   CLK0: <TIMESPEC TS_host_dcm0_clk0 = PERIOD "host_dcm0_clk0" TS_okHostClk
+   PHASE -0.93375 ns HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'okSysClk', used in period specification
+   'TS_okSysClk', was traced into PLL_ADV instance
+   SDRAM_FIFO_inst/memc3_infrastructure_inst/u_pll_adv. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT3: <TIMESPEC
+   TS_SDRAM_FIFO_inst_memc3_infrastructure_inst_mcb_drp_clk_bufg_in = PERIOD
+   "SDRAM_FIFO_inst_memc3_infrastructure_inst_mcb_drp_clk_bufg_in" TS_okSysClk /
+   0.78125 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'okSysClk', used in period specification
+   'TS_okSysClk', was traced into PLL_ADV instance
+   SDRAM_FIFO_inst/memc3_infrastructure_inst/u_pll_adv. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_SDRAM_FIFO_inst_memc3_infrastructure_inst_clk_2x_180 =
+   PERIOD "SDRAM_FIFO_inst_memc3_infrastructure_inst_clk_2x_180" TS_okSysClk /
+   6.25 PHASE 0.8 ns HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'okSysClk', used in period specification
+   'TS_okSysClk', was traced into PLL_ADV instance
+   SDRAM_FIFO_inst/memc3_infrastructure_inst/u_pll_adv. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_SDRAM_FIFO_inst_memc3_infrastructure_inst_clk_2x_0 =
+   PERIOD "SDRAM_FIFO_inst_memc3_infrastructure_inst_clk_2x_0" TS_okSysClk /
+   6.25 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'okSysClk', used in period specification
+   'TS_okSysClk', was traced into PLL_ADV instance
+   SDRAM_FIFO_inst/memc3_infrastructure_inst/u_pll_adv. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT2: <TIMESPEC TS_SDRAM_FIFO_inst_memc3_infrastructure_inst_clk0_bufg_in
+   = PERIOD "SDRAM_FIFO_inst_memc3_infrastructure_inst_clk0_bufg_in" TS_okSysClk
+   / 1.5625 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'okSysClk', used in period specification
+   'TS_okSysClk', was traced into DCM_CLKGEN instance
+   variable_freq_clk_generator_inst/DCM_CLKGEN_1. The following new TNM groups
+   and period specifications were generated at the DCM_CLKGEN output(s): 
+   CLKFXDV: <TIMESPEC TS_variable_freq_clk_generator_inst_clkout_i = PERIOD
+   "variable_freq_clk_generator_inst_clkout_i" TS_okSysClk / 0.84 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'SYS_CLK3', used in period specification
+   'TS_SYS_CLK3', was traced into PLL_ADV instance
+   SDRAM_FIFO_inst/memc3_infrastructure_inst/u_pll_adv. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT3: <TIMESPEC
+   TS_SDRAM_FIFO_inst_memc3_infrastructure_inst_mcb_drp_clk_bufg_in_0 = PERIOD
+   "SDRAM_FIFO_inst_memc3_infrastructure_inst_mcb_drp_clk_bufg_in_0" TS_SYS_CLK3
+   / 0.78125 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'SYS_CLK3', used in period specification
+   'TS_SYS_CLK3', was traced into PLL_ADV instance
+   SDRAM_FIFO_inst/memc3_infrastructure_inst/u_pll_adv. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_SDRAM_FIFO_inst_memc3_infrastructure_inst_clk_2x_180_0
+   = PERIOD "SDRAM_FIFO_inst_memc3_infrastructure_inst_clk_2x_180_0" TS_SYS_CLK3
+   / 6.25 PHASE 0.8 ns HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'SYS_CLK3', used in period specification
+   'TS_SYS_CLK3', was traced into PLL_ADV instance
+   SDRAM_FIFO_inst/memc3_infrastructure_inst/u_pll_adv. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_SDRAM_FIFO_inst_memc3_infrastructure_inst_clk_2x_0_0 =
+   PERIOD "SDRAM_FIFO_inst_memc3_infrastructure_inst_clk_2x_0_0" TS_SYS_CLK3 /
+   6.25 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'SYS_CLK3', used in period specification
+   'TS_SYS_CLK3', was traced into PLL_ADV instance
+   SDRAM_FIFO_inst/memc3_infrastructure_inst/u_pll_adv. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT2: <TIMESPEC
+   TS_SDRAM_FIFO_inst_memc3_infrastructure_inst_clk0_bufg_in_0 = PERIOD
+   "SDRAM_FIFO_inst_memc3_infrastructure_inst_clk0_bufg_in_0" TS_SYS_CLK3 /
+   1.5625 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'SYS_CLK3', used in period specification
+   'TS_SYS_CLK3', was traced into DCM_CLKGEN instance
+   variable_freq_clk_generator_inst/DCM_CLKGEN_1. The following new TNM groups
+   and period specifications were generated at the DCM_CLKGEN output(s): 
+   CLKFXDV: <TIMESPEC TS_variable_freq_clk_generator_inst_clkout_i_0 = PERIOD
+   "variable_freq_clk_generator_inst_clkout_i_0" TS_SYS_CLK3 / 0.84 HIGH 50%>
+
+Done...
+
+INFO:NgdBuild:1222 - Setting CLKIN_PERIOD attribute associated with DCM instance
+   host/dcm0 to 9.960000 ns based on the period specification (<TIMESPEC
+   "TS_okHostClk" = PERIOD "okHostClk" 9.96 ns HIGH 50%;>
+   [/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3/xem6310.ucf(14)]).
+INFO:NgdBuild:1222 - Setting CLKIN_PERIOD attribute associated with DCM instance
+   variable_freq_clk_generator_inst/DCM_CLKGEN_1 to 10.000000 ns based on the
+   period specification (<TIMESPEC "TS_okSysClk" = PERIOD "okSysClk" 10 ns HIGH
+   50%;> [/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3/xem6310.ucf(38)]).
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive 'host/core0/core0/a0/pc0/read_strobe_flop'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'host/core0/core0/a0/pc0/k_write_strobe_flop' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'host/core0/core0/a0/pc0/interrupt_ack_flop'
+   has unconnected output pin
+WARNING:NgdBuild:452 - logical net 'okEHx<64>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<63>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<62>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<61>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<60>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<59>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<58>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<57>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<56>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<55>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<54>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<53>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<52>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<51>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<50>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<49>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<48>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<47>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<46>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<45>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<44>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<43>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<42>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<41>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<40>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<39>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<38>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<37>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<36>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<35>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<34>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<33>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<129>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<128>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<127>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<126>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<125>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<124>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<123>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<122>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<121>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<120>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<119>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<118>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<117>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<116>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<115>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<114>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<113>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<112>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<111>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<110>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<109>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<108>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<107>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<106>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<105>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<104>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<103>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<102>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<101>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<100>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<99>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<98>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<194>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<193>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<192>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<191>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<190>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<189>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<188>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<187>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<186>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<185>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<184>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<183>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<182>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<181>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<180>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<179>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<178>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<177>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<176>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<175>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<174>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<173>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<172>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<171>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<170>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<169>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<168>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<167>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<166>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<165>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<164>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<163>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<259>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<258>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<257>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<256>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<255>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<254>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<253>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<252>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<251>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<250>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<249>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<248>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<247>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<246>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<245>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<244>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<243>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<242>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<241>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<240>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<239>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<238>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<237>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<236>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<235>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<234>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<233>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<232>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<231>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<230>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<229>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<228>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<324>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<323>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<322>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<321>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<320>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<319>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<318>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<317>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<316>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<315>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<314>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<313>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<312>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<311>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<310>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<309>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<308>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<307>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<306>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<305>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<304>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<303>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<302>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<301>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<300>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<299>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<298>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<297>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<296>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<295>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<294>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<293>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<389>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<388>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<387>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<386>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<385>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<384>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<383>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<382>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<381>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<380>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<379>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<378>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<377>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<376>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<375>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<374>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<373>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<372>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<371>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<370>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<369>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<368>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<367>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<366>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<365>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<364>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<363>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<362>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<361>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<360>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<359>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<358>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<454>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<453>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<452>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<451>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<450>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<449>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<448>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<447>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<446>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<445>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<444>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<443>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<442>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<441>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<440>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<439>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<438>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<437>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<436>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<435>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<434>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<433>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<432>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<431>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<430>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<429>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<428>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<427>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<426>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<425>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<424>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<423>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<519>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<518>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<517>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<516>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<515>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<514>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<513>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<512>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<511>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<510>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<509>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<508>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<507>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<506>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<505>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<504>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<503>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<502>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<501>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<500>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<499>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<498>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<497>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<496>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<495>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<494>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<493>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<492>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<491>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<490>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<489>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<488>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<584>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<583>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<582>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<581>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<580>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<579>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<578>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<577>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<576>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<575>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<574>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<573>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<572>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<571>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<570>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<569>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<568>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<567>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<566>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<565>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<564>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<563>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<562>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<561>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<560>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<559>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<558>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<557>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<556>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<555>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<554>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<553>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<649>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<648>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<647>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<646>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<645>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<644>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<643>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<642>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<641>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<640>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<639>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<638>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<637>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<636>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<635>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<634>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<633>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<632>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<631>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<630>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<629>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<628>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<627>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<626>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<625>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<624>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<623>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<622>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<621>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<620>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<619>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<618>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<714>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<713>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<712>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<711>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<710>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<709>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<708>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<707>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<706>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<705>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<704>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<703>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<702>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<701>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<700>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<699>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<698>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<697>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<696>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<695>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<694>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<693>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<692>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<691>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<690>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<689>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<688>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<687>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<686>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<685>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<684>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<683>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<779>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<778>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<777>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<776>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<775>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<774>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<773>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<772>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<771>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<770>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<769>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<768>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<767>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<766>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<765>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<764>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<763>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<762>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<761>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<760>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<759>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<758>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<757>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<756>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<755>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<754>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<753>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<752>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<751>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<750>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<749>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<748>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<844>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<843>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<842>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<841>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<840>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<839>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<838>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<837>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<836>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<835>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<834>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<833>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<832>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<831>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<830>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<829>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<828>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<827>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<826>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<825>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<824>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<823>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<822>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<821>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<820>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<819>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<818>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<817>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<816>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<815>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<814>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<813>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<909>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<908>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<907>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<906>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<905>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<904>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<903>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<902>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<901>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<900>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<899>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<898>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<897>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<896>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<895>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<894>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<893>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<892>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<891>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<890>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<889>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<888>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<887>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<886>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<885>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<884>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<883>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<882>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<881>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<880>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<879>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<878>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<974>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<973>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<972>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<971>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<970>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<969>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<968>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<967>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<966>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<965>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<964>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<963>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<962>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<961>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<960>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<959>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<958>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<957>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<956>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<955>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<954>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<953>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<952>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<951>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<950>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<949>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<948>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<947>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<946>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<945>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<944>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<943>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1039>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1038>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1037>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1036>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1035>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1034>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1033>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1032>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1031>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1030>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1029>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1028>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1027>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1026>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1025>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1024>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1023>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1022>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1021>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1020>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1019>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1018>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1017>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1016>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1015>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1014>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1013>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1012>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1011>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1010>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1009>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1008>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1104>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1103>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1102>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1101>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1100>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1099>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1098>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1097>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1096>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1095>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1094>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1093>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1092>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1091>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1090>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1089>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1088>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1087>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1086>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1085>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1084>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1083>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1082>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1081>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1080>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1079>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1078>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1077>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1076>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1075>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1074>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1073>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1169>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1168>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1167>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1166>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1165>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1164>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1163>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1162>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1161>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1160>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1159>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1158>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1157>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1156>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1155>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1154>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1153>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1152>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1151>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1150>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1149>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1148>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1147>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1146>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1145>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1144>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1143>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1142>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1141>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1140>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1139>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1138>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1234>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1233>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1232>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1231>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1230>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1229>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1228>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1227>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1226>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1225>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1224>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1223>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1222>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1221>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1220>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1219>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1218>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1217>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1216>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1215>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1214>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1213>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1212>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1211>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1210>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1209>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1208>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1207>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1206>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1205>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1204>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1203>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1299>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1298>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1297>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1296>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1295>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1294>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1293>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1292>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1291>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1290>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1289>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1288>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1287>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1286>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1285>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1284>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1283>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1282>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1281>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1280>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1279>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1278>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1277>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1276>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1275>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1274>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1273>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1272>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1271>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1270>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1269>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1268>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1364>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1363>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1362>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1361>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1360>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1359>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1358>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1357>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1356>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1355>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1354>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1353>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1352>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1351>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1350>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1349>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1348>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1347>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1346>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1345>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1344>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1343>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1342>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1341>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1340>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1339>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1338>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1337>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1336>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1335>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1334>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1333>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1429>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1428>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1427>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1426>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1425>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1424>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1423>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1422>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1421>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1420>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1419>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1418>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1417>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1416>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1415>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1414>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1413>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1412>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1411>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1410>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1409>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1408>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1407>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1406>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1405>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1404>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1403>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1402>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1401>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1400>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1399>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1398>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1494>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1493>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1492>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1491>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1490>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1489>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1488>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1487>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1486>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1485>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1484>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1483>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1482>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1481>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1480>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1479>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1478>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1477>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1476>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1475>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1474>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1473>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1472>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1471>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1470>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1469>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1468>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1467>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1466>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1465>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1464>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1463>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1559>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1558>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1557>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1556>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1555>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1554>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1553>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1552>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1551>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1550>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1549>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1548>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1547>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1546>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1545>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1544>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1543>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1542>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1541>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1540>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1539>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1538>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1537>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1536>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1535>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1534>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1533>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1532>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1531>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1530>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1529>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1528>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1624>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1623>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1622>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1621>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1620>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1619>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1618>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1617>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1616>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1615>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1614>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1613>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1612>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1611>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1610>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1609>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1608>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1607>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1606>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1605>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1604>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1603>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1602>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1601>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1600>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1599>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1598>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1597>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1596>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1595>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1594>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1593>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1689>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1688>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1687>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1686>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1685>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1684>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1683>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1682>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1681>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1680>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1679>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1678>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1677>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1676>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1675>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1674>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1673>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1672>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1671>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1670>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1669>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1668>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1667>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1666>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1665>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1664>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1663>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1662>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1661>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1660>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1659>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1658>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1754>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1753>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1752>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1751>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1750>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1749>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1748>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1747>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1746>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1745>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1744>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1743>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1742>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1741>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1740>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1739>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1738>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1737>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1736>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1735>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1734>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1733>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1732>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1731>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1730>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1729>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1728>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1727>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1726>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1725>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1724>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1723>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1819>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1818>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1817>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1816>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1815>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1814>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1813>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1812>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1811>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1810>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1809>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1808>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1807>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1806>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1805>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1804>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1803>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1802>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1801>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1800>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1799>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1798>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1797>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1796>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1795>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1794>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1793>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1792>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1791>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1790>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1789>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1788>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1884>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1883>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1882>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1881>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1880>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1879>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1878>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1877>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1876>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1875>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1874>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1873>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1872>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1871>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1870>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1869>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1868>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1867>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1866>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1865>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1864>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1863>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1862>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1861>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1860>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1859>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1858>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1857>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1856>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1855>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1854>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1853>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1949>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1948>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1947>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1946>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1945>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1944>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1943>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1942>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1941>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1940>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1939>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1938>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1937>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1936>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1935>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1934>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1933>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1932>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1931>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1930>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1929>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1928>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1927>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1926>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1925>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1924>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1923>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1922>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1921>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1920>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1919>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1918>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2014>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2013>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2012>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2011>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2010>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2009>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2008>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2007>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2006>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2005>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2004>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2003>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2002>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2001>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2000>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1999>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1998>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1997>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1996>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1995>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1994>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1993>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1992>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1991>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1990>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1989>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1988>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1987>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1986>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1985>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1984>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<1983>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2079>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2078>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2077>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2076>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2075>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2074>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2073>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2072>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2071>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2070>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2069>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2068>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2067>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2066>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2065>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2064>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2063>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2062>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2061>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2060>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2059>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2058>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2057>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2056>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2055>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2054>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2053>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2052>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2051>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2050>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2049>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2048>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2144>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2143>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2142>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2141>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2140>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2139>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2138>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2137>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2136>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2135>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2134>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2133>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2132>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2131>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2130>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2129>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2128>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2127>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2126>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2125>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2124>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2123>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2122>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2121>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2120>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2119>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2118>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2117>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2116>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2115>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2114>' has no driver
+WARNING:NgdBuild:452 - logical net 'okEHx<2113>' has no driver
+WARNING:NgdBuild:452 - logical net 'N1480' has no driver
+WARNING:NgdBuild:452 - logical net 'N1484' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 1063
+
+Total memory usage is 470868 kilobytes
+
+Writing NGD file "main.ngd" ...
+Total REAL time to NGDBUILD completion:  14 sec
+Total CPU time to NGDBUILD completion:   14 sec
+
+Writing NGDBUILD log file "main.bld"...

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/main.ncd
+OUTFILE=/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface/main.bit
+FAMILY=Spartan6
+PART=xc6slx45-2fgg484
+WORKINGDIR=/data/ckemere/Dropbox/Code/Intan/RHD2000-USB3Iface
+LICENSE=ISE
+USER_INFO=210672414_207303275_210547154_941
