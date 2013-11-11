@@ -86,7 +86,7 @@ module SDRAM_FIFO  #(
 	input wire 										  FIFO_write_to,
 	input wire [15:0] 							  FIFO_data_in,
 	input wire										  FIFO_read_from,
-	output wire [15:0]							  FIFO_data_out,
+	output wire [31:0]							  FIFO_data_out,
 
 
 	// FIFO capacity monitor
@@ -264,6 +264,7 @@ module SDRAM_FIFO  #(
 	wire [25:0]		buffer_word_addr_rd_ti, buffer_word_addr_wr_ti;
 	wire [26:0]		buffer_word_addr_diff_ti;
 	
+	wire [31:0]    wrong_ordered_FIFO_data_out;
 	
 	assign c3_sys_clk     = 1'b0;
 	assign ddr2_cs_n = 1'b0;
@@ -505,23 +506,25 @@ module SDRAM_FIFO  #(
 		.rd_data_count(pipe_in_count), // Bus [8 : 0] 
 		.wr_data_count(pipe_in_word_count)); // Bus [10 : 0] 
 
-	// Output mini-FIFO (512 x 54 bits in from SDRAM; 2048 x 16 bits out to Opal Kelly interface)
-
-	fifo_w64_512_r16_2048 okPipeOut_fifo (
+	// Output mini-FIFO (512 x 64 bits in from SDRAM; 2048 x 16 bits out to Opal Kelly interface)
+   // FOR USB3, want 1024x32
+	// fifo_w64_512_r16_2048 okPipeOut_fifo (
+	fifo_w64_512_r32_1024 okPipeOut_fifo (
 		.rst(reset),
 		.wr_clk(c3_clk0),
 		.rd_clk(okClk),
 		.din(pipe_out_data), // Bus [63 : 0] 
 		.wr_en(pipe_out_write),
 		.rd_en(FIFO_read_from),                       // was po0_ep_read
-		.dout(FIFO_data_out), // Bus [15 : 0]       // was po0_ep_datain
+		.dout(wrong_ordered_FIFO_data_out), // Bus [31 : 0]       // was po0_ep_datain // switched to 32b wide for USB3
 		.full(),
 		.empty(),
 		.valid(),
 		.rd_data_count(pipe_out_word_count), // Bus [10 : 0] 
 		.wr_data_count(pipe_out_count)); // Bus [8 : 0] 
 	
-	
+	assign FIFO_data_out[15:0] = wrong_ordered_FIFO_data_out[31:16];
+	assign FIFO_data_out[31:16] = wrong_ordered_FIFO_data_out[15:0];
 	// FIFO capacity calculation: how many 16-bit words are in the entire FIFO?
 	// (Including the contents of the SDRAM and the two mini-FIFOs.)
 

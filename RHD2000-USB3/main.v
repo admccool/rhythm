@@ -262,7 +262,7 @@ module main #(
 	
 	reg [15:0]		FIFO_data_in;
 	reg				FIFO_write_to;
-	wire [15:0] 	FIFO_data_out;
+	wire [31:0] 	FIFO_data_out; //changed to 32b for USB3
 	wire				FIFO_read_from;
 	wire [31:0] 	num_words_in_FIFO;
 
